@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { MovieListComponent } from "./components/movie-list.component";
 
 @Component({
   selector: 'movie-page',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, MovieListComponent],
   template: `
     <section>
       <h1>Movies</h1>
-      <p>This page is the shell for a movie list. A REST API will be connected here later.</p>
+      <movie-list></movie-list>
       <p>Right now it just shows the movie page skeleton and a simple back link.</p>
       <a routerLink="" class="back-link">Back to home</a>
     </section>
